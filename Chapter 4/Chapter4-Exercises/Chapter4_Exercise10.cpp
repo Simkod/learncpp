@@ -24,6 +24,9 @@ int main()
         ComputerWon,
         Tie
     };
+    
+    srand((unsigned int)time(NULL));
+    
     //vector container
     vector<Figure> figuresToSelectfrom;
     figuresToSelectfrom.push_back(Rock);
@@ -67,7 +70,6 @@ int main()
             //computer selection
         Figure computerSelection;
 
-        srand((unsigned int)time(NULL));
         computerSelection = figuresToSelectfrom.at(rand() % figuresToSelectfrom.size());
         cout << "Computer selected: ";
         if (computerSelection == Rock) { cout << "Rock" << endl; }
