@@ -1,0 +1,35 @@
+class Toaster
+
+public:
+void toastBread(Bread& bread);
+void cancelToasting();
+ToasterStatus& getToasterStatus() const;
+void getToastingProgress() const;
+vector<ToasterSlot> getEmptyToasterSlots() const;
+
+private:
+vector<ToasterSlot> m_toasterSlots;
+
+-----------------------------------------------------------
+
+class Flower
+
+public:
+
+void grow();
+void photosintetize();
+void setStatus();
+void getStatus() const;
+int& getAgeInDays() const;
+int& getSize() const;
+
+private:
+void aging();
+void updateStatus();
+
+private:
+FlowerStatus m_status;
+int m_ageInDays;
+int m_size;
+
+
