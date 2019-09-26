@@ -7,12 +7,6 @@
 // the quotient or fraction p / q of two integers, a numerator p and a non-zero denominator q.
 // Since q may be equal to 1, every integer is a rational number.
 
-
-
-
-// Provide assignment, addition, subtraction, multiplication, division, and equality operators.
-// Also, provide a conversion to double. 
-// Why would people want to use a Rational class ?
 class Rational
 {
 public:
