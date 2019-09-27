@@ -37,14 +37,11 @@ void Money::roundCentAmount()
 {
 	std::vector<int> digitsInCents;
 	collectDigits(digitsInCents, m_centAmount);
-	for (std::vector<int>::iterator digitIt = digitsInCents.end() - 1; digitIt != digitsInCents.begin(); --digitIt)
-	{
-		if (*digitIt >= 5)
-		{
-			++*(digitIt - 1);
-		}
-		digitIt = digitsInCents.erase(digitIt);
-	}
+	
+	if (digitsInCents[1] >= 5)
+	    {
+		++digitsInCents[0];
+	    }
 	
 	long int newCentAmount = digitsInCents[0];
 	setCentAmount(newCentAmount);
